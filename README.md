@@ -9,6 +9,10 @@ AEVA2 is a unified framework for on-device Android automation, combining a low-l
 
 ## Prerequisites
 
+### Hardware Requirements
+- **RAM**: Your Android device **must have at least 8GB of RAM**. The on-device AI models (LiteRT-LM) require significant memory to load and run efficiently. Devices with less than 8GB will likely crash or fail to load the model.
+
+### Software Prerequisites
 - **Android Device**: With Developer Options and USB Debugging enabled.
 - **Termux**: **CRITICAL**. You must install Termux to run the agent on your phone.
     - **DO NOT** use the Google Play Store version (it is outdated and broken).
