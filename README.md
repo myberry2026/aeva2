@@ -5,7 +5,7 @@ AEVA2 is a unified framework for on-device Android automation, combining a low-l
 ## Project Structure
 
 - `bridge-android/`: The Android-side relay and bridge infrastructure. Handles communication between the device and the agent.
-- `termux-agent/`: The intelligent agent designed to run in Termux (or remotely) to control the Android device via the bridge.
+- `termux-agent/`: The intelligent agent that runs directly inside Termux on your phone to control the Android device via the bridge. **Termux must be pre-installed** on your device (see Prerequisites).
 
 ## Prerequisites
 
