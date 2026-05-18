@@ -60,7 +60,7 @@ When you run the build script, your computer acts as a **factory**:
 ### 2. The Deployment (`deploy_local.sh`)
 This script handles the "delivery" of the app to your device:
 - **The Jump Host**: Often, your development machine isn't the one physically connected to the phone. We use `scp` to send the APK to a "Jump Host" (a machine named `win` in our scripts) that has the USB connection.
-- **ADB (Android Debug Bridge)**: This is the most critical tool. It communicates over USB to the phone.
+- **ADB (Android Debug Bridge)**: This is a critical tool used for **installing the APK** and for **debugging**. it communicates over USB to the phone, allowing the computer to manage the device, install packages, and inspect logs.
 - **Smart Installation**: We use `adb install -r -t -g`.
     - `-r`: Replaces the old version but keeps your settings.
     - `-t`: Allows "Test" apps to be installed.
