@@ -66,7 +66,7 @@ This script handles the "delivery" of the app to your device:
     - `-t`: Allows "Test" apps to be installed.
     - `-g`: **Crucial!** It automatically grants all permissions (Camera, Files, Accessibility) so you don't have to click "Allow" dozens of times on the phone.
 
-### 3. Networking & Connectivity (The Two-Way Bridge)
+### 3. The Tunnels (The Secret to Connectivity) for Debugging
 To communicate across different networks or bypass firewalls, the system uses two main approaches:
 
 - **Tailscale (Production/Remote)**: For reliable connectivity across different locations, we recommend using **Tailscale**. It creates a secure Mesh VPN, allowing your phone and computer to talk as if they were on the same local network, regardless of physical location.
