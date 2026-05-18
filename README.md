@@ -66,17 +66,23 @@ This script handles the "delivery" of the app to your device:
     - `-t`: Allows "Test" apps to be installed.
     - `-g`: **Crucial!** It automatically grants all permissions (Camera, Files, Accessibility) so you don't have to click "Allow" dozens of times on the phone.
 
-### 3. The Tunnels (The Secret to Connectivity)
-The phone and the computer need to talk to each other. Since they are on different networks or behind firewalls, we use **ADB Tunnels**:
-- **ADB Forward**: Allows your computer to "call" the phone (e.g., to ask for a screenshot).
-- **ADB Reverse**: Allows the phone to "call" your computer (e.g., to send an alert or event).
-- This creates a **two-way bridge** over a simple USB cable.
+### 3. Networking & Connectivity (The Two-Way Bridge)
+To communicate across different networks or bypass firewalls, the system uses two main approaches:
 
-### 4. The Agent Server (`run_termux_server.sh`)
-Finally, we start the "Brain":
-- It deploys Python scripts into the **Termux** environment on your phone.
-- It starts a **Daemon** (a background worker) that stays alive even if you close the terminal.
-- **On-Device AI**: It loads a machine learning model (LiteRT-LM) onto the phone's GPU. This allows the phone to "see" and "think" locally without sending your data to the cloud.
+- **Tailscale (Production/Remote)**: For reliable connectivity across different locations, we recommend using **Tailscale**. It creates a secure Mesh VPN, allowing your phone and computer to talk as if they were on the same local network, regardless of physical location.
+- **ADB Tunnels (Debugging Only)**: When connected via USB, we use ADB tunnels (`forward` and `reverse`). This is primarily for **debugging** and local development.
+    - **ADB Forward**: Allows your computer to "call" the phone (e.g., to ask for a screenshot).
+    - **ADB Reverse**: Allows the phone to "call" your computer (e.g., to send events).
+
+### 4. Debugging & Remote Interaction
+If you want to see what's happening or use more powerful models from your computer:
+- **Screen Mirroring**: Use tools like **scrcpy** to mirror the phone's screen to your desktop in real-time.
+- **Remote Models**: While the phone can run models locally, you can also connect to powerful models running on your computer via **Telnet**, **SSH**, or **ADB tunnels**.
+- **The Agent Server (`run_termux_server.sh`)**:
+    - Deploys Python scripts into the **Termux** environment on your phone.
+    - Starts a **Daemon** (background worker) that stays alive even if you close the terminal.
+    - **On-Device AI**: Optionally loads a machine learning model (LiteRT-LM) onto the phone's GPU for 100% offline intelligence.
+
 
 ## Summary of Dependencies
 
