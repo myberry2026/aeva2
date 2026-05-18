@@ -9,10 +9,13 @@ AEVA2 is a unified framework for on-device Android automation, combining a low-l
 
 ## Prerequisites
 
-- Android device with Developer Options enabled.
-- ADB installed on your host machine.
-- Python 3.10+ (for the agent and bridge scripts).
-- Node.js (for the bridge server if applicable).
+- **Android Device**: With Developer Options and USB Debugging enabled.
+- **Termux**: **CRITICAL**. You must install Termux to run the agent on your phone.
+    - **DO NOT** use the Google Play Store version (it is outdated and broken).
+    - **Install from F-Droid**: Download the F-Droid APK from [f-droid.org](https://f-droid.org/), search for "Termux", and install it. This is the official, open-source, and up-to-date version.
+- **ADB**: Installed on your host machine.
+- **Java 21 (OpenJDK)**: Required for compiling the bridge.
+- **Python 3.10+**: Required for the agent and relay scripts.
 
 ## Quick Start: Launching Both Components
 
