@@ -1,0 +1,3 @@
+ID 0: 'Update your app' id:title @ [539, 728]
+ID 1: id:upgrade_details @ [540, 890]
+ID 2: 'UPDATE' id:install_button @ [539, 2147]

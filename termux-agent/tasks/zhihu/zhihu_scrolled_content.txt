@@ -1,0 +1,31 @@
+--- Step 1 ---
+12:56 PM
+Texting with 12345 (SMS/MMS)
+2:04 PM
+SF weather is sunny 25C
+2:04 PM • SMS
+Text message
+12345
+
+
+--- Step 2 ---
+12:56 PM
+Texting with 12345 (SMS/MMS)
+2:04 PM
+SF weather is sunny 25C
+2:04 PM • SMS
+Text message
+12345
+
+
+--- Step 3 ---
+12:56 PM
+Texting with 12345 (SMS/MMS)
+2:04 PM
+SF weather is sunny 25C
+2:04 PM • SMS
+终于搞定了中文输入
+SMS
+12345
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="color_background" format="color" />
+    <attr name="color_surface" format="color" />
+    <attr name="color_border" format="color" />
+    <attr name="color_text_primary" format="color" />
+    <attr name="color_text_secondary" format="color" />
+    <attr name="color_accent" format="color" />
+    <attr name="color_success" format="color" />
+    <attr name="color_card_bg" format="color" />
+    <attr name="color_input_bg" format="color" />
+</resources>

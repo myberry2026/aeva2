@@ -1,0 +1,300 @@
+
+==================== STEP 0 [PLAN] ====================
+[PROMPT]:
+你是一个 Android 自动化任务规划专家。
+
+【总目标】: 打开浏览器搜索 'weather in San Francisco'，查看当前的温度和天气，然后打开短信 App 给 '12345' 发送短信：'SF天气是[温度和天气]'，最后返回桌面。
+
+请把总目标拆成【成功状态条件】清单（不是动作步骤！），满足：
+1. 每条 ≤25 字，描述一个【可观察到的状态/结果】，而不是要做的动作
+   ❌ 错："点击搜索按钮" / "进入详情页"（这是动作）
+   ✅ 对："屏幕显示搜索结果列表" / "屏幕上看到了电话号码"（这是状态）
+2. 每条必须可以通过单张截图肉眼判断 true/false
+3. 状态条件 once-true-stays-true（达到过就视为完成，不会因为后续页面切换变 false）
+4. 总数 3-8 条之间
+5. 包含起始/收尾的状态条件
+
+【严格禁令】:
+- 严禁使用任何 LaTeX 符号（如 \ge, \le, \times）。
+- 严禁在 JSON 字符串中使用反斜杠 "\"。
+- 数学符号请用普通文本替代，如 ">= 4.6"。
+
+示例（目标："在地图搜披萨找 4.6+ 的店点 Call 然后回主页"）：
+{"plan": [
+  "当前在地图 app 内",
+  "看到过 'best pizza' 搜索结果列表",
+  "看到过评分 >= 4.6 的店出现在屏幕",
+  "看到过该店的电话号码（详情页或拨号界面）",
+  "回到了地图主页"
+]}
+
+注意上面每条都是【状态描述】——只要这个状态在执行过程中【任何时刻】被达到过就算 true，不管走哪条路径达到。
+
+返回 JSON（不要 markdown 包裹）:
+{"plan": ["状态条件1", "状态条件2", "..."]}
+
+
+[RESPONSE]:
+{
+  "plan": [
+    "当前在Android系统桌面",
+    "浏览器屏幕显示搜索关键词 'weather in San Francisco'",
+    "屏幕上可观察到当前的温度和天气描述",
+    "短信应用已打开，且收件人显示为 12345",
+    "屏幕上显示了发送给 12345 的短信内容（包含天气信息）",
+    "回到了Android系统桌面"
+  ]
+}
+
+==================== STEP 1 [DECISION] ====================
+[PROMPT]:
+
+你是一个 Android 自动化专家，正在驱动一台真实手机。
+当前屏幕真实分辨率: 1080 x 2400 (所有坐标点 [x, y] 必须在此范围内)
+
+【总目标】: 打开浏览器搜索 'weather in San Francisco'，查看当前的温度和天气，然后打开短信 App 给 '12345' 发送短信：'SF天气是[温度和天气]'，最后返回桌面。
+【已达成成就】: 无
+
+【任务清单】（[x]=已完成 [→]=当前焦点 [ ]=待办）:
+[→] 1. 当前在Android系统桌面
+[ ] 2. 浏览器屏幕显示搜索关键词 'weather in San Francisco'
+[ ] 3. 屏幕上可观察到当前的温度和天气描述
+[ ] 4. 短信应用已打开，且收件人显示为 12345
+[ ] 5. 屏幕上显示了发送给 12345 的短信内容（包含天气信息）
+[ ] 6. 回到了Android系统桌面
+【当前焦点子任务】: 当前在Android系统桌面
+
+【上一步执行反馈】:
+任务刚启动，尚未执行动作。当前可能在桌面、锁屏或任意 app，请先看截图判断是否需要 home/open_app 校正环境。
+
+【本机已安装应用（open_app 时从中选 pkg）】:
+com.aeva.mobile, com.android.camera2, com.android.chrome, com.android.settings, com.android.stk, com.google.android.apps.docs, com.google.android.apps.maps, com.google.android.apps.messaging, com.google.android.apps.photos, com.google.android.apps.youtube.music, com.google.android.calendar, com.google.android.contacts, com.google.android.deskclock, com.google.android.dialer, com.google.android.documentsui, com.google.android.gm, com.google.android.googlequicksearchbox, com.google.android.youtube
+
+【当前可交互清单】（注意：ID 仅本步有效）:
+ID 0: 'Profile picture, double tap to open Google Account' @ [954, 338]
+ID 1: 'Settings' @ [235, 464]
+ID 2: 'search_bar' @ [540, 659]
+ID 3: 'search_action_bar' @ [540, 659]
+ID 4: 'ImageButton' @ [126, 659]
+ID 5: 'Search settings' @ [376, 659]
+ID 6: 'main_content_scrollable_container' @ [540, 1553]
+ID 7: 'homepage_container' @ [540, 1553]
+ID 8: 'recycler_view' @ [540, 1553]
+ID 9: 'LinearLayout' @ [540, 885]
+ID 10: 'Network & internet' @ [407, 859]
+ID 11: 'Mobile, Wi‑Fi, hotspot' @ [364, 920]
+ID 12: 'LinearLayout' @ [540, 1116]
+ID 13: 'Connected devices' @ [412, 1090]
+ID 14: 'Bluetooth, pairing' @ [332, 1151]
+ID 15: 'LinearLayout' @ [540, 1347]
+ID 16: 'Apps' @ [250, 1321]
+ID 17: 'Assistant, recent apps, default apps' @ [481, 1382]
+ID 18: 'LinearLayout' @ [540, 1578]
+ID 19: 'Notifications' @ [339, 1552]
+ID 20: 'Notification history, conversations' @ [467, 1613]
+ID 21: 'LinearLayout' @ [540, 1809]
+ID 22: 'Battery' @ [273, 1783]
+ID 23: '100%' @ [234, 1844]
+ID 24: 'LinearLayout' @ [540, 2040]
+ID 25: 'Storage' @ [280, 2014]
+ID 26: '45% used - 4.39 GB free' @ [384, 2075]
+ID 27: 'LinearLayout' @ [540, 2246]
+ID 28: 'Sound & vibration' @ [395, 2245]
+ID 29: 'Volume, haptics, Do Not Disturb' @ [448, 2306]
+ID 30: 'LinearLayout' @ [540, 2362]
+
+【Gap 分析要求】：
+1. **[核心进化] 纯坐标操作**：如果目标（如图片、视频、特定区域）在清单中没有直接 ID，请根据截图视觉位置，直接返回其坐标点 `point: [x, y]`。
+2. 刚才那一步生效了吗？没生效的根因是什么？
+3. 离总目标还差什么？严禁重复执行已完成的步骤。
+4. 如果目标已达成，果断执行 "finish"。
+
+必须返回以下 JSON 格式（不要返回 markdown 包裹）:
+{
+  "thought": "描述分析。如果使用了坐标点 [x, y] 而非 ID，请解释是如何根据截图估算的。",
+  "action": "click" | "type" | "scroll_down" | "scroll_up" | "back" | "home" | "open_app" | "long_press" | "wait" | "finish",
+  "id": ID数字 (若清单中有则必填),
+  "point": [x, y] (若清单中无 ID，根据截图估算坐标并填入此数组),
+  "text": "输入内容",
+  "pkg": "包名",
+  "seconds": 3
+}
+
+
+[RESPONSE]:
+```json
+{
+  "thought": "根据总目标，当前需要从系统设置回到浏览器进行搜索。我将使用 open_app 打开 Chrome 浏览器。",
+  "action": "open_app",
+  "id": null,
+  "point": null,
+  "text": null,
+  "pkg": "com.android.chrome",
+  "seconds": 3
+}
+```
+
+==================== STEP 1 [VERIFICATION] ====================
+[PROMPT]:
+
+【总目标】: 打开浏览器搜索 'weather in San Francisco'，查看当前的温度和天气，然后打开短信 App 给 '12345' 发送短信：'SF天气是[温度和天气]'，最后返回桌面。
+【目前已记录的关键里程碑】: 无
+
+【任务状态清单】（每条是【可观察状态】，不是动作；once-true-stays-true）:
+  1. [ ] 当前在Android系统桌面
+  2. [ ] 浏览器屏幕显示搜索关键词 'weather in San Francisco'
+  3. [ ] 屏幕上可观察到当前的温度和天气描述
+  4. [ ] 短信应用已打开，且收件人显示为 12345
+  5. [ ] 屏幕上显示了发送给 12345 的短信内容（包含天气信息）
+  6. [ ] 回到了Android系统桌面
+
+刚才尝试对 'com.android.chrome' 做了 'open_app'。
+我会传两张图给你：第一张是【动作前 BEFORE】，第二张是【动作后 AFTER】。
+请严格对比 BEFORE 和 AFTER 回答：
+1. 这一步动作 (action_success)：界面是否朝目标方向变化了？该步是否生效？给出 reflection 解释。
+2. 这一步如果实质推进了目标，把里程碑写进 progress。
+3. 整个任务 (mission_complete)：对照【总目标】，所有子环节（含收尾步骤）是否已全部完成？给出 mission_reason 解释。
+4. subtasks_status：对照上面【任务状态清单】，**返回与清单一一对应的完整 boolean 数组**，长度必须 = 6。
+   - 第 i 个 bool = 当前【或之前任意时刻】是否观察到第 i+1 条状态条件成立
+   - 已经是 [x] 的格子继续填 true（once-true-stays-true）
+   - 这一步刚观察到的也填 true
+   - 必须有视觉证据，不能凭推测；模糊不清填 false
+
+⚠️ 字段规则：
+- `action_success` vs `mission_complete` 是两件事：
+   * action_success = 这一步动作生效了吗（局部）
+   * mission_complete = 整个总目标全部达成了吗（全局）
+   * 一步动作可以成功，但任务还远没完成 → action_success=true, mission_complete=false
+- `progress`：单个字符串。这一步带来的【真实进展】，例如：
+   * "进入了搜索结果列表" / "成功输入搜索词 'best pizza'" / "成功打开店铺详情页" / "成功触发拨号界面"
+   * 如果只是误回退/与目标无关的页面跳转/纯等待，填空字符串 ""
+- `remaining_gap`：只写还没做的【具体下一步动作】，禁止复述总目标全文。mission_complete=true 时填 "None"。
+
+返回 JSON（按顺序填）:
+{
+  "action_success": bool,
+  "reflection": "≤40字 解释 action_success 的判断理由（看到什么变化/没变化）",
+  "progress": "≤30字 这一步的真实进展，无则填空字符串",
+  "remaining_gap": "还差什么具体动作",
+  "mission_complete": bool,
+  "mission_reason": "≤40字 解释 mission_complete 的判断理由（哪些环节已做完/还差什么环节）",
+  "subtasks_status": [bool, bool, bool, bool, bool, bool]
+}
+
+
+[RESPONSE]:
+```json
+{
+  "action_success": false,
+  "reflection": "执行 open_app('com.android.chrome') 后，界面回到了 Android 系统设置页，表明应用未能成功打开或操作失败。",
+  "progress": "",
+  "remaining_gap": "打开浏览器并搜索 'weather in San Francisco'",
+  "mission_complete": false,
+  "mission_reason": "尚未打开浏览器搜索天气信息，任务处于初期阶段。",
+  "subtasks_status": [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+}
+```
+
+==================== STEP 2 [DECISION] ====================
+[PROMPT]:
+
+你是一个 Android 自动化专家，正在驱动一台真实手机。
+当前屏幕真实分辨率: 1080 x 2400 (所有坐标点 [x, y] 必须在此范围内)
+
+【总目标】: 打开浏览器搜索 'weather in San Francisco'，查看当前的温度和天气，然后打开短信 App 给 '12345' 发送短信：'SF天气是[温度和天气]'，最后返回桌面。
+【已达成成就】: 当前在Android系统桌面
+
+【任务清单】（[x]=已完成 [→]=当前焦点 [ ]=待办）:
+[x] 1. 当前在Android系统桌面
+[→] 2. 浏览器屏幕显示搜索关键词 'weather in San Francisco'
+[ ] 3. 屏幕上可观察到当前的温度和天气描述
+[ ] 4. 短信应用已打开，且收件人显示为 12345
+[ ] 5. 屏幕上显示了发送给 12345 的短信内容（包含天气信息）
+[ ] 6. 回到了Android系统桌面
+【当前焦点子任务】: 浏览器屏幕显示搜索关键词 'weather in San Francisco'
+
+【上一步执行反馈】:
+上一步 [open_app] 作用于 [com.android.chrome]。动作结果: 失败（执行 open_app('com.android.chrome') 后，界面回到了 Android 系统设置页，表明应用未能成功打开或操作失败。）。本步打勾: #1 [1/6]。任务整体: 未完成（尚未打开浏览器搜索天气信息，任务处于初期阶段。）。当前 Gap: 打开浏览器并搜索 'weather in San Francisco'
+
+【本机已安装应用（open_app 时从中选 pkg）】:
+com.aeva.mobile, com.android.camera2, com.android.chrome, com.android.settings, com.android.stk, com.google.android.apps.docs, com.google.android.apps.maps, com.google.android.apps.messaging, com.google.android.apps.photos, com.google.android.apps.youtube.music, com.google.android.calendar, com.google.android.contacts, com.google.android.deskclock, com.google.android.dialer, com.google.android.documentsui, com.google.android.gm, com.google.android.googlequicksearchbox, com.google.android.youtube
+
+【当前可交互清单】（注意：ID 仅本步有效）:
+ID 0: 'Web View' @ [540, 1232]
+ID 1: 'Home' @ [63, 201]
+ID 2: 'location_bar_status' @ [179, 201]
+ID 3: 'Connection is secure' @ [178, 201]
+ID 4: 'google.com/search?q=cute+cat+wallpaper&oq=cute+cat+wallpaper&aqs=chrome.0.69i59j69i60j0i512j69i60l2j0i512l5.6781j0j1&client=ms-unknown&sourceid=chrome-mobile&ie=UTF-8#sv=CAMScxoyKhBlLWVfMC1sOUJTNWdaeVBNMg5lXzAtbDlCUzVnWnlQTToOTUZNVlAxZF9rWkRpZ00gBCoxChtfR25vQWF1bW9PZmVydXI4UC1JdnF5UWdfMzUSEGUtZV8wLWw5QlM1Z1p5UE0YADABOABKBAgBEAIYByC7gJj2CkoIEAIYASACKAE' @ [446, 201]
+ID 5: 'toolbar_buttons' @ [886, 201]
+ID 6: 'New tab' @ [760, 201]
+ID 7: 'Switch or close tabs' @ [891, 201]
+ID 8: 'Update available. More options' @ [1017, 201]
+
+【Gap 分析要求】：
+1. **[核心进化] 纯坐标操作**：如果目标（如图片、视频、特定区域）在清单中没有直接 ID，请根据截图视觉位置，直接返回其坐标点 `point: [x, y]`。
+2. 刚才那一步生效了吗？没生效的根因是什么？
+3. 离总目标还差什么？严禁重复执行已完成的步骤。
+4. 如果目标已达成，果断执行 "finish"。
+
+必须返回以下 JSON 格式（不要返回 markdown 包裹）:
+{
+  "thought": "描述分析。如果使用了坐标点 [x, y] 而非 ID，请解释是如何根据截图估算的。",
+  "action": "click" | "type" | "scroll_down" | "scroll_up" | "back" | "home" | "open_app" | "long_press" | "wait" | "finish",
+  "id": ID数字 (若清单中有则必填),
+  "point": [x, y] (若清单中无 ID，根据截图估算坐标并填入此数组),
+  "text": "输入内容",
+  "pkg": "包名",
+  "seconds": 3
+}
+
+
+[RESPONSE]:
+```json
+{
+  "thought": "上一步由于应用打开失败，导致任务停滞。当前屏幕显示了一个Google搜索界面，这是一个可用的机会。我需要将目标关键词 'weather in San Francisco' 输入到搜索框中进行搜索。我会点击搜索框区域，然后输入文本。",
+  "action": "type",
+  "id": null,
+  "point": [
+    499,
+    87
+  ],
+  "text": "weather in San Francisco",
+  "pkg": null,
+  "seconds": 3
+}
+```
+
+==================== STEP 2 [VERIFICATION] ====================
+[PROMPT]:
+
+【总目标】: 打开浏览器搜索 'weather in San Francisco'，查看当前的温度和天气，然后打开短信 App 给 '12345' 发送短信：'SF天气是[温度和天气]'，最后返回桌面。
+【目前已记录的关键里程碑】: 当前在Android系统桌面
+
+【任务状态清单】（每条是【可观察状态】，不是动作；once-true-stays-true）:
+  1. [x] 当前在Android系统桌面
+  2. [ ] 浏览器屏幕显示搜索关键词 'weather in San Francisco'
+  3. [ ] 屏幕上可观察到当前的温度和天气描述
+  4. [ ] 短信应用已打开，且收件人显示为 12345
+  5. [ ] 屏幕上显示了发送给 12345 的短信内容（包含天气信息）
+  6. [ ] 回到了Android系统桌面
+
+刚才尝试对 '坐标点 [499, 87]' 做了 'type'。
+我会传两张图给你：第一张是【动作前 BEFORE】，第二张是【动作后 AFTER】。
+请严格对比 BEFORE 和 AFTER 回答：
+1. 这一步动作 (action_success)：界面是否朝目标方向变化了？该步是否生效？给出 reflection 解释。
+2. 这一步如果实质推进了目标，把里程碑写进 progress。
+3. 整个任务 (mission_complete)：对照【总目标】，所有子环节（含收尾步骤）是否已全部完成？给出 mission_reason 解释。
+4. subtasks_status：对照上面【任务状态清单】，**返回与清单一一对应的完整 boolean 数组**，长度必须 = 6。
+   - 第 i 个 bool = 当前【或之前任意时刻】是否观察到第 i+1 条状态条件成立
+   - 已经是 [x] 的格子继续填 true（once-true-stays-true）
+   - 这一步刚观察到的也填 true
+   - 必须有视觉证据，不能凭推测；模糊不清填 false
+
+⚠️ 字段规则：

@@ -1,0 +1,39 @@
+# Build outputs
+**/build/
+**/.gradle/
+**/bin/
+**/obj/
+**/out/
+**/dist/
+
+# Logs and screenshots
+**/logs/
+**/screenshots/
+**/screenshots_cat/
+**/*.log
+**/data/screenshots/
+**/data/xml/
+**/scratch/
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+**/.venv/
+**/venv/
+
+# IDE and OS
+**/.idea/
+**/.vscode/
+**/.DS_Store
+**/Thumbs.db
+**/*.iml
+
+# Android specific
+**/local.properties
+**/*.apk
+**/*.aab
+
+# Models
+**/*.litertlm
+**/models/

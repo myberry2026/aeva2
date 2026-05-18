@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aeva</string>
+    <string name="accessibility_description">Aeva 辅助功能服务 — 允许 Aeva 读取和操作安卓屏幕。</string>
+    
+    <!-- Chat Feedback -->
+    <string name="agent_received_task">⚡️ **Agent 收到了你的任务**\n已发送至 Termux 执行: `%1$s`</string>
+    <string name="task_submission_failed">❌ **任务提交失败**\nRelay 返回: %1$s</string>
+    <string name="cannot_connect_relay">❌ **无法连接 Relay**\n请确认 Termux 中 relay_server.py 已启动。\n\n错误: %1$s</string>
+    <string name="agent_stopped">🛑 **Agent 已停止**</string>
+    <string name="cannot_connect_relay_simple">❌ **无法连接 Relay**\n错误: %1$s</string>
+    <string name="agent_stopped_voice">🛑 Agent 已被用户停止</string>
+    <string name="agent_stopped_tts">任务已停止</string>
+    <string name="task_finished_tts">任务已完成</string>
+    <string name="task_failed_tts">任务失败</string>
+</resources>

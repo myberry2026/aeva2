@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Midnight Colors -->
+    <color name="midnight_background">#0A0A0B</color>
+    <color name="midnight_surface">#161618</color>
+    <color name="midnight_border">#2D2D30</color>
+    <color name="midnight_text_primary">#F1F1F1</color>
+    <color name="midnight_text_secondary">#A1A1AA</color>
+    <color name="midnight_accent">#3B82F6</color>
+    <color name="midnight_success">#10B981</color>
+    <color name="midnight_card_bg">#161618</color>
+    <color name="midnight_input_bg">#1F1F22</color>
+
+    <!-- Daylight Colors -->
+    <color name="daylight_background">#F8F9FA</color>
+    <color name="daylight_surface">#FFFFFF</color>
+    <color name="daylight_border">#E5E7EB</color>
+    <color name="daylight_text_primary">#111827</color>
+    <color name="daylight_text_secondary">#4B5563</color>
+    <color name="daylight_accent">#2563EB</color>
+    <color name="daylight_success">#059669</color>
+    <color name="daylight_card_bg">#FFFFFF</color>
+    <color name="daylight_input_bg">#F3F4F6</color>
+
+    <!-- Aliases for backward compatibility or generic usage -->
+    <color name="card_bg">@color/midnight_card_bg</color>
+    <color name="border">@color/midnight_border</color>
+    <color name="input_bg">@color/midnight_input_bg</color>
+</resources>

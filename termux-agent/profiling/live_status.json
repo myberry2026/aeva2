@@ -1,0 +1,494 @@
+{
+  "timestamp": "20:46:40",
+  "inventory_count": 61,
+  "interactive_elements": [
+    {
+      "id": 0,
+      "label": "desc:'Google'",
+      "pos": [
+        542,
+        366
+      ]
+    },
+    {
+      "id": 1,
+      "label": "View",
+      "pos": [
+        953,
+        353
+      ]
+    },
+    {
+      "id": 2,
+      "label": "desc:'Sign in'",
+      "pos": [
+        955,
+        353
+      ]
+    },
+    {
+      "id": 3,
+      "label": "'Sign in'",
+      "pos": [
+        955,
+        350
+      ]
+    },
+    {
+      "id": 4,
+      "label": "'Search settings' id:og-te",
+      "pos": [
+        80,
+        359
+      ]
+    },
+    {
+      "id": 5,
+      "label": "'Main menu'",
+      "pos": [
+        80,
+        359
+      ]
+    },
+    {
+      "id": 6,
+      "label": "TextView",
+      "pos": [
+        542,
+        503
+      ]
+    },
+    {
+      "id": 7,
+      "label": "'Google Search'",
+      "pos": [
+        105,
+        497
+      ]
+    },
+    {
+      "id": 8,
+      "label": "'deepseek v3 技术 报告 中文' (EditText)",
+      "pos": [
+        477,
+        498
+      ]
+    },
+    {
+      "id": 9,
+      "label": "'Clear Search' id:tsuid_VkUFasPxNuGl0PEP3o-3yAY_3",
+      "pos": [
+        848,
+        497
+      ]
+    },
+    {
+      "id": 10,
+      "label": "'Search by voice' id:Q7Ulpb",
+      "pos": [
+        977,
+        497
+      ]
+    },
+    {
+      "id": 11,
+      "label": "TextView",
+      "pos": [
+        542,
+        561
+      ]
+    },
+    {
+      "id": 12,
+      "label": "View",
+      "pos": [
+        112,
+        618
+      ]
+    },
+    {
+      "id": 13,
+      "label": "desc:'AI Mode'",
+      "pos": [
+        112,
+        618
+      ]
+    },
+    {
+      "id": 14,
+      "label": "'AI Mode'",
+      "pos": [
+        114,
+        617
+      ]
+    },
+    {
+      "id": 15,
+      "label": "View",
+      "pos": [
+        267,
+        618
+      ]
+    },
+    {
+      "id": 16,
+      "label": "desc:'All'",
+      "pos": [
+        267,
+        618
+      ]
+    },
+    {
+      "id": 17,
+      "label": "'All'",
+      "pos": [
+        267,
+        618
+      ]
+    },
+    {
+      "id": 18,
+      "label": "View",
+      "pos": [
+        410,
+        618
+      ]
+    },
+    {
+      "id": 19,
+      "label": "desc:'Videos'",
+      "pos": [
+        410,
+        618
+      ]
+    },
+    {
+      "id": 20,
+      "label": "'Videos'",
+      "pos": [
+        411,
+        617
+      ]
+    },
+    {
+      "id": 21,
+      "label": "View",
+      "pos": [
+        594,
+        618
+      ]
+    },
+    {
+      "id": 22,
+      "label": "desc:'Images'",
+      "pos": [
+        594,
+        618
+      ]
+    },
+    {
+      "id": 23,
+      "label": "'Images'",
+      "pos": [
+        594,
+        617
+      ]
+    },
+    {
+      "id": 24,
+      "label": "View",
+      "pos": [
+        782,
+        618
+      ]
+    },
+    {
+      "id": 25,
+      "label": "desc:'Forums'",
+      "pos": [
+        782,
+        618
+      ]
+    },
+    {
+      "id": 26,
+      "label": "'Forums'",
+      "pos": [
+        781,
+        617
+      ]
+    },
+    {
+      "id": 27,
+      "label": "View",
+      "pos": [
+        978,
+        618
+      ]
+    },
+    {
+      "id": 28,
+      "label": "desc:'Shopping'",
+      "pos": [
+        978,
+        618
+      ]
+    },
+    {
+      "id": 29,
+      "label": "'Shopping'",
+      "pos": [
+        990,
+        617
+      ]
+    },
+    {
+      "id": 30,
+      "label": "'Search Results'",
+      "pos": [
+        2,
+        707
+      ]
+    },
+    {
+      "id": 31,
+      "label": "'AI Overview'",
+      "pos": [
+        218,
+        754
+      ]
+    },
+    {
+      "id": 32,
+      "label": "'View 3 corroboration links'",
+      "pos": [
+        871,
+        753
+      ]
+    },
+    {
+      "id": 33,
+      "label": "'About this result'",
+      "pos": [
+        1016,
+        753
+      ]
+    },
+    {
+      "id": 34,
+      "label": "View",
+      "pos": [
+        542,
+        1581
+      ]
+    },
+    {
+      "id": 35,
+      "label": "View",
+      "pos": [
+        542,
+        1581
+      ]
+    },
+    {
+      "id": 36,
+      "label": "View",
+      "pos": [
+        542,
+        1581
+      ]
+    },
+    {
+      "id": 37,
+      "label": "View",
+      "pos": [
+        542,
+        982
+      ]
+    },
+    {
+      "id": 38,
+      "label": "'DeepSeek-V3 技术报告'",
+      "pos": [
+        261,
+        856
+      ]
+    },
+    {
+      "id": 39,
+      "label": "'详细介绍了这一开源混合专家模型（MoE）的架构、训练策略、高效率计算框架及训练后阶段'",
+      "pos": [
+        538,
+        919
+      ]
+    },
+    {
+      "id": 40,
+      "label": "'。该模型拥有 6710 亿总参数，其中激活参数为 370 亿，旨在实现顶级性能与低训练成本的平衡。'",
+      "pos": [
+        540,
+        1045
+      ]
+    },
+    {
+      "id": 41,
+      "label": "'知乎专栏 (+1) - View related links'",
+      "pos": [
+        242,
+        1110
+      ]
+    },
+    {
+      "id": 42,
+      "label": "'以下是基于其技术报告的中文核心要点总结：'",
+      "pos": [
+        542,
+        1213
+      ]
+    },
+    {
+      "id": 43,
+      "label": "'Web results'",
+      "pos": [
+        2,
+        1676
+      ]
+    },
+    {
+      "id": 44,
+      "label": "'知乎专栏'",
+      "pos": [
+        540,
+        1692
+      ]
+    },
+    {
+      "id": 45,
+      "label": "'https://zhuanlan.zhihu.com'",
+      "pos": [
+        540,
+        1739
+      ]
+    },
+    {
+      "id": 46,
+      "label": "'【LLM技术报告】DeepSeek-V3技术报告（全文）'",
+      "pos": [
+        542,
+        1859
+      ]
+    },
+    {
+      "id": 47,
+      "label": "'About this result'",
+      "pos": [
+        1016,
+        1706
+      ]
+    },
+    {
+      "id": 48,
+      "label": "TextView",
+      "pos": [
+        542,
+        2025
+      ]
+    },
+    {
+      "id": 49,
+      "label": "'知乎'",
+      "pos": [
+        540,
+        2223
+      ]
+    },
+    {
+      "id": 50,
+      "label": "'https://zhuanlan.zhihu.com'",
+      "pos": [
+        540,
+        2271
+      ]
+    },
+    {
+      "id": 51,
+      "label": "'DeepSeek-V3 技术报告全文详解'",
+      "pos": [
+        542,
+        2329
+      ]
+    },
+    {
+      "id": 52,
+      "label": "'About this result'",
+      "pos": [
+        1016,
+        2239
+      ]
+    },
+    {
+      "id": 53,
+      "label": "desc:'Home' id:home_button",
+      "pos": [
+        63,
+        201
+      ]
+    },
+    {
+      "id": 54,
+      "label": "id:location_bar_status",
+      "pos": [
+        179,
+        201
+      ]
+    },
+    {
+      "id": 55,
+      "label": "desc:'Connection is secure' id:location_bar_status_icon",
+      "pos": [
+        178,
+        201
+      ]
+    },
+    {
+      "id": 56,
+      "label": "id:url_bar (EditText)",
+      "pos": [
+        446,
+        201
+      ]
+    },
+    {
+      "id": 57,
+      "label": "id:toolbar_buttons",
+      "pos": [
+        886,
+        201
+      ]
+    },
+    {
+      "id": 58,
+      "label": "desc:'New tab' id:optional_toolbar_button",
+      "pos": [
+        760,
+        201
+      ]
+    },
+    {
+      "id": 59,
+      "label": "desc:'Switch or close tabs' id:tab_switcher_button",
+      "pos": [
+        891,
+        201
+      ]
+    },
+    {
+      "id": 60,
+      "label": "desc:'Update available. More options' id:menu_button",
+      "pos": [
+        1017,
+        201
+      ]
+    }
+  ]
+}

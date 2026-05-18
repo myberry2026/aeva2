@@ -1,0 +1,5 @@
+Usage: litert-lm run [OPTIONS]
+                     MODEL_REFERENCE
+Try 'litert-lm run -h' for help.
+
+Error: No such option: --model Did you mean --help?

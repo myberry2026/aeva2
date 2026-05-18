@@ -1,0 +1,19 @@
+Downloading gemma-4-E2B-it.litertlm from litert-community/gemma-4-E2B-it-litert-lm...
+E0000 00:00:1778538706.223843  274395 engine.cc:491] Failed to create engine: INVALID_ARGUMENT: Audio backend constraint mismatch. Model requires one of [cpu] but Audio backend is GPU
+=== Source Location Trace: ===
+third_party/odml/litert_lm/runtime/engine/engine_settings.cc:92
+third_party/odml/litert_lm/runtime/engine/engine_settings.cc:427
+third_party/odml/litert_lm/runtime/core/engine_impl.cc:358
+An error occurred
+Traceback (most recent call last):
+  File "/Users/a84513/Code/tmp/phone-vision-memory/.litert_env/lib/python3.13/site-packages/litert_lm_cli/model.py", line 255, in run_interactive
+    engine_cm = litert_lm.Engine(
+        self.model_path,
+    ...<4 lines>...
+        audio_backend=audio_backend_val,
+    )
+  File "/Users/a84513/Code/tmp/phone-vision-memory/.litert_env/lib/python3.13/site-packages/litert_lm/engine.py", line 82, in __init__
+    raise RuntimeError(
+        f"Failed to create LiteRT-LM engine for {self.model_path}"
+    )
+RuntimeError: Failed to create LiteRT-LM engine for /Users/a84513/.cache/huggingface/hub/models--litert-community--gemma-4-E2B-it-litert-lm/snapshots/b4f4f4df93418ddb4aa7da8bf33b584602a5b9f8/gemma-4-E2B-it.litertlm

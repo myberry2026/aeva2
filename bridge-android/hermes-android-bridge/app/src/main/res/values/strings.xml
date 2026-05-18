@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aeva</string>
+    <string name="accessibility_description">Aeva accessibility service — allows Aeva to read and interact with the Android screen.</string>
+    
+    <!-- Chat Feedback -->
+    <string name="agent_received_task">⚡️ **Agent received your task**\nSent to Termux: `%1$s`</string>
+    <string name="task_submission_failed">❌ **Task submission failed**\nRelay returned: %1$s</string>
+    <string name="cannot_connect_relay">❌ **Cannot connect to Relay**\nPlease ensure relay_server.py is running in Termux.\n\nError: %1$s</string>
+    <string name="agent_stopped">🛑 **Agent Stopped**</string>
+    <string name="cannot_connect_relay_simple">❌ **Cannot connect to Relay**\nError: %1$s</string>
+    <string name="agent_stopped_voice">🛑 Agent stopped by user</string>
+    <string name="agent_stopped_tts">Agent stopped</string>
+    <string name="task_finished_tts">Task Finished</string>
+    <string name="task_failed_tts">Task Failed</string>
+</resources>
