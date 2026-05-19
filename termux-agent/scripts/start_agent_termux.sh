@@ -15,7 +15,7 @@ cd "$PROJECT_DIR"
 export CONTROL_BACKEND=bridge
 export BRIDGE_TOKEN=9RG2VK
 export BRIDGE_URL=http://127.0.0.1:8765
-export AGENT_MODEL=WIN
+export AGENT_MODEL=GALLERY
 export GALLERY_URL=http://127.0.0.1:8080
 
 echo "🤖 Agent 启动中 (端侧模式)..."

@@ -130,13 +130,13 @@ MODEL_OPTIONS = {
         "model": "google/gemma-4-e4b"
     },
     "WIN": {
-        # "url": "http://100.113.214.52:1234/v1/chat/completions",  # "http://127.0.0.1:1234/v1/chat/completions",
-        # "model": "google/gemma-4-e4b"
-        "url": os.getenv("GALLERY_URL", "http://localhost:8080") + "/v1/chat/completions",
-        "model": "Gemma-4-E2B-it"
+        "url": "http://100.113.214.52:1234/v1/chat/completions",  # "http://127.0.0.1:1234/v1/chat/completions",
+        "model": "google/gemma-4-e4b"
+        # "url": os.getenv("GALLERY_URL", "http://localhost:8080") + "/v1/chat/completions",
+        # "model": "Gemma-4-E2B-it"
     },
 }
-CURRENT_MODEL = os.getenv("AGENT_MODEL", "WIN")
+CURRENT_MODEL = os.getenv("AGENT_MODEL", "GALLERY")
 
 CONTROL_BACKEND = os.getenv("CONTROL_BACKEND", "bridge").lower()
 assert CONTROL_BACKEND in ("adb", "bridge"), f"CONTROL_BACKEND must be adb/bridge, got {CONTROL_BACKEND!r}"
