@@ -10,17 +10,22 @@ In a nutshell, we have our agent running a loop of multiple steps to achieve giv
 2. Improve the hand: Remove the friction. Install IME and set it as default. Abstract the key operations.
 3. Improve the skill: Composing common use-cases of multi-step operations into just one single tool query to reduce error rate and latency. E.g. via Android intents.
 
-## Additional information on Agent performance:
+## More information on agent performance:
+
+See the 1-min raw video for search nvidia stock price: [very simple demo](https://github.com/myberry2026/aeva2/blob/master/search-nvidia-stock.mp4).
 
 We used sample queries to test the agent. We start with simple queries for one app, and cross-app settings.
 See [CASES.md](termux-agent/CASES.md) for queries in Chinese and [CASES_ENGLISH.md](termux-agent/CASES_ENGLISH.md) for English version.
 
-We find gemma4-4b-it and gemma-2b-it are surprisingly fine for the agent on-device. gemma-2b-it takes more try and error to achieve the goal. Thinking mode helps, otherwise it takes more steps to try and error.
+We find gemma4-4b-it and gemma-2b-it are surprisingly fine for the simple tasks on-device. gemma-2b-it takes more try and error to achieve the goal. Thinking mode helps, otherwise it takes more steps to try and error.
+
+One thing I'm not very happy with is that the model can be very sensitive to prompts. Changing from Chinese prompts to English prompts may cost you hours to debug.
+
+Overall I believe better models in the next six months will make it much easier to get high success rate for more complex workloads.
+
+### Latency and token usage:
 
 gemma4-4b-it runs 50token/s on my RTX3060. It can take 200s or more to achieve a simple task.
-
-See the 1-min raw video for search nvidia stock price: [very simple demo](https://github.com/myberry2026/aeva2/blob/master/search-nvidia-stock.mp4).
-
 gemma4-2b-it runs 100token/s on my RTX3060, and 10token/s on my moto edge 2025. Slow, but tolerable if you just leave it there scrolling reddit/twitter for you.
 
 For detailed performance metrics, 100-scenario benchmark results, and UI latency optimizations, please check out:
