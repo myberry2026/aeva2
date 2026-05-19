@@ -2,11 +2,28 @@
 
 AEVA2 is a unified system for on-device Android automation, combining a low-latency communication bridge (hand) with an intelligent agent powered by on-device LLM model (brain).
 
+In a nutshell, we have our agent running a loop of multiple steps to achieve given goals. Barge in is supported and agent will change per your voice inputs from the next step.
+
 ## What have we done to improve the agent accuracy:
 
 1. Improve the brain: Decide - Do - Verify cycle. Always check before and after each action.
 2. Improve the hand: Remove the friction. Install IME and set it as default. Abstract the key operations.
 3. Improve the skill: Composing common use-cases of multi-step operations into just one single tool query to reduce error rate and latency. E.g. via Android intents.
+
+## Additional information on Agent performance:
+
+We used sample queries to test the agent. We start with simple queries for one app, and cross-app settings.
+See [CASES.md](termux-agent/CASES.md) for queries in Chinese and [CASES_ENGLISH.md](termux-agent/CASES_ENGLISH.md) for English version.
+
+We find gemma4-4b-it and gemma-2b-it are surprisingly fine for the agent on-device. gemma-2b-it takes more try and error to achieve the goal. Thinking mode helps, otherwise it takes more steps to try and error.
+
+gemma4-4b-it runs 50token/s on my RTX3060.
+gemma4-2b-it runs 100token/s on my RTX3060, and 10token/s on my moto edge 2025. Slow, but tolerable if you just leave it there scrolling reddit/twitter for you.
+
+For detailed performance metrics, 100-scenario benchmark results, and UI latency optimizations, please check out:
+
+- [termux-agent/BENCHMARK_OPTIMIZATION.md](termux-agent/BENCHMARK_OPTIMIZATION.md) (100-scenario benchmark, UI latency optimizations, how to get gemma to beat it)
+- [termux-agent/PROFILING.md](termux-agent/PROFILING.md) (Detailed phase timings and Text vs Image token comparison)
 
 ## Project Structure
 
