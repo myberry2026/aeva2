@@ -17,8 +17,9 @@ See [CASES.md](termux-agent/CASES.md) for queries in Chinese and [CASES_ENGLISH.
 
 We find gemma4-4b-it and gemma-2b-it are surprisingly fine for the agent on-device. gemma-2b-it takes more try and error to achieve the goal. Thinking mode helps, otherwise it takes more steps to try and error.
 
-gemma4-4b-it runs 50token/s on my RTX3060. It can take 200s or more to achieve a simple task. See the 1-min raw video for search nvidia stock price:
-https://github.com/myberry2026/aeva2/blob/master/search-nvidia-stock.mp4
+gemma4-4b-it runs 50token/s on my RTX3060. It can take 200s or more to achieve a simple task.
+
+See the 1-min raw video for search nvidia stock price: [very simple demo](https://github.com/myberry2026/aeva2/blob/master/search-nvidia-stock.mp4).
 
 gemma4-2b-it runs 100token/s on my RTX3060, and 10token/s on my moto edge 2025. Slow, but tolerable if you just leave it there scrolling reddit/twitter for you.
 
