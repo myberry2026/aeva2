@@ -75,7 +75,7 @@ Also the Termux server should be listening for connections. You may see an overl
 
 Start with simply queries.
 Sample queries to test the agent:
-See termux-agent/CASES_ENGLISH.md for queries in English.
+See [CASES.md](termux-agent/CASES.md) for queries in Chinese and [CASES_ENGLISH.md](termux-agent/CASES_ENGLISH.md) for English version.
 
 ### 4. Debugging
 
