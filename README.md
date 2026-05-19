@@ -12,7 +12,7 @@ In a nutshell, we have our agent running a loop of multiple steps to achieve giv
 
 ## More information on agent performance:
 
-See the 1-min raw video for search nvidia stock price: [very simple demo](https://github.com/myberry2026/aeva2/blob/master/search-nvidia-stock.mp4).
+See the 1-min raw video for search nvidia stock price: [very simple demo](https://youtube.com/shorts/R4_sL4O1icE).
 
 We used sample queries to test the agent. We start with simple queries for one app, and cross-app settings.
 See [CASES.md](termux-agent/CASES.md) for queries in Chinese and [CASES_ENGLISH.md](termux-agent/CASES_ENGLISH.md) for English version.
