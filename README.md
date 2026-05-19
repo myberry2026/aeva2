@@ -7,6 +7,8 @@ AEVA2 is a unified framework for on-device Android automation, combining a low-l
 - `bridge-android/`: The Android-side relay and bridge infrastructure. Handles communication between the device and the agent.
 - `termux-agent/`: The intelligent agent that runs directly inside Termux on your phone to control the Android device via the bridge. **Termux must be pre-installed** on your device (see Prerequisites).
 
+![AEVA2 Architecture](architecture.png)
+
 ## Prerequisites
 
 ### Hardware Requirements
@@ -43,7 +45,7 @@ cd bridge-android
 ./scripts/build_local.sh && ./scripts/deploy_direct.sh
 ```
 
-## 1.5. What you have to do manually by yourself:
+### 1.5. What you have to do manually by yourself:
 
 APK will be installed on your android device, then you need to open it and go to settings on top right corner to enable accessibility service and status overlay. Allow the notification permission and screen recording permission for the APP to control other apps. [These are the required permissions you need to set manually, and gemini/claude cannot do for you.]
 
