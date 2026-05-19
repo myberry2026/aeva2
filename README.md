@@ -6,7 +6,7 @@ In a nutshell, we have our agent running a loop of multiple steps to achieve giv
 
 ## What have we done to improve the agent accuracy:
 
-1. Improve the brain: Decide - Do - Verify cycle. Always check before and after each action.
+1. Improve the brain: Decide - Do - Verify cycle. Always check before and after each action. Provide both screenshots and filtered XML trees.
 2. Improve the hand: Remove the friction. Install IME and set it as default. Abstract the key operations.
 3. Improve the skill: Composing common use-cases of multi-step operations into just one single tool query to reduce error rate and latency. E.g. via Android intents.
 
