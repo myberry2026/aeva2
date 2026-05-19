@@ -1,6 +1,6 @@
 # AEVA2: On-device EdgeMind Agent
 
-Think about OpenAI/Claude Computer Use Agent that controls your computer. We wanted to build an agent that runs on your phone. Best to be fully local.
+Think about OpenAI/Claude Computer Use Agent that controls your computer. We wanted to build an agent that takes over your phone. Best to be fully local.
 
 AEVA2 is a unified system for on-device Android automation, combining a low-latency communication bridge (hand) with an intelligent agent powered by on-device LLM model (brain).
 
