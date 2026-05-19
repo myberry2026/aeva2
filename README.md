@@ -1,6 +1,12 @@
-# AEVA2: Android Edge Vision Agent
+# AEVA2: On-device EdgeMind Agent
 
-AEVA2 is a unified framework for on-device Android automation, combining a low-latency communication bridge with an intelligent agent powered by vision-language models.
+AEVA2 is a unified system for on-device Android automation, combining a low-latency communication bridge (hand) with an intelligent agent powered by on-device LLM model (brain).
+
+## What have we done to improve the agent accuracy:
+
+1. Improve the brain: Decide - Do - Verify cycle. Always check before and after each action.
+2. Improve the hand: Remove the friction. Install IME and set it as default. Abstract the key operations.
+3. Improve the skill: Composing common use-cases of multi-step operations into just one single tool query to reduce error rate and latency. E.g. via Android intents.
 
 ## Project Structure
 
@@ -21,7 +27,7 @@ AEVA2 is a unified framework for on-device Android automation, combining a low-l
 - **Termux**: **CRITICAL**. You must install Termux to run the agent on your phone.
   - **DO NOT** use the Google Play Store version (it is outdated and broken).
   - **Install from F-Droid**: Ask Claude/Gemini to download the F-Droid APK from [f-droid.org](https://f-droid.org/), search for "Termux", and install it. This is the official, open-source, and up-to-date version. Ask Claude/Gemini to install ssh-server for you on termux..
-- **ADB**: Installed on your host machine.
+- **ADB**: Installed on your host machine. ADB keyboard is needed to avoid typing issue when the agent needs to type something on phone.
 - **Java 21 (OpenJDK)**: Required for compiling the bridge.
 - **Python 3.10+**: Required for the agent and relay scripts.
 
@@ -84,6 +90,8 @@ ADB is your friend. We support ADB mode and bridge mode. ADB is for debugging.
 Check termux-agent/run.ipynb for easy debugging.
 
 To use LLM server from your laptop rather than phone, simply change the option in humanoid_agent.py, and start_agent_temux.sh script. [Ask Claude/Gemini to do it for you.]
+
+Feel free to switch models from your phone to your laptop models. Check [humanoid_agent.py](termux-agent/humanoid_agent.py) and [start_agent_temux.sh](termux-agent/scripts/start_agent_temux.sh) to change the config.
 
 ### 5. Benchmark and Comparison:
 
